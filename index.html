@@ -8,6 +8,63 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header>
+        <div class="header_container">
+            <div class="header_container_title">
+                <h1>My aplicacion</h1>
+            </div>
+            <div class="header_container_buttom">
+                <button type="submit" onclick="bajarForm()"  >+</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="productos">
+            <div class="container_productos">
+                <div class="producto">
+                    <div class="producto_modelo">
+                        <p>Lentes</p>
+                    </div>
+                    <div class="producto_marca">
+                        <p>123456</p>
+                    </div>
+                    <div class="producto_precio">
+                        <p>1500</p>
+                    </div>
+                    <div class="producto_botones">
+                        <a href="#">Editar</a>
+                        <a href="#">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <div id="form_container" class="form_container">
+                <div class="form_container_cerrar">
+                    <a href="#" onclick="bajarForm()" >X</a>
+                </div>
+                <form>
+                    <div class="form_container_datos">
+                        <div class="form_container_datos_nombre">
+                             <h3>Modelo</h3>
+                             <input type="text" name="modelo" required placeholder="Modelo" id="modelo_form" class="modelo_form datos">
+                       </div>
+                       <div class="form_container_datos_email">
+                             <h3>Marca</h3>
+                             <input type="text" name="marca" required placeholder="marca" id ='marca_form' class="marca_form datos" >
+                       </div>
+                       <div class="Form_container_datos_numero">
+                             <h3>Precio</h3>
+                             <input type="number"  name="precio" required min="0" placeholder="Precio" id="precio_form" class="precio_form datos">
+                       </div>
+                       <div class="form_container_buttom">
+                             <button type="submit" name="agregar" id="agregar_form">Agregar</button>
+                       </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
     <script src="./app.js"></script>
 </body>
 </html>

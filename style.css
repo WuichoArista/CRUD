@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: #0b3954;
+}
+
+.header_container{
+    max-width: 83rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_container_title h1{
+    margin: 0;
+    padding: 15px;
+    color: white;
+    
+}
+
+
+
+.header_container_buttom button{
+    background-color: #0f496b;
+    border: 0;
+    color: white;
+    font-size: 45px;
+    padding: 15px;
+}
+
+.header_container_buttom button:hover{
+    background-color: #125880;
+    cursor: pointer;
+}
+
+/*SECCION DEL PRODUCTOS*/
+
+.container_productos{
+    max-width: 83rem;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.producto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+/*SECCION DEL FORMULARIO*/
+
+
+
+.form{
+   display: flex;
+   justify-content: center;
+}
+
+.form_container{
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
+    position: fixed;
+    top: -500px;
+    margin: 0 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.form_container_abajo{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form_container_cerrar a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+.form_container_datos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form_container_datos h3{
+    margin-bottom: 5px;
+}
+
+.form_container_datos_nombre, .form_container_datos_email,.Form_container_datos_numero{
+    margin-bottom: 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.datos{
+    border: 1px solid #0b3954;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 2px;
+    width: 95%;
+    height: 30px;
+}
+
+.form_container_buttom{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form_container_buttom button{
+    background-color: #087e8b;
+    color: white;
+    border: 0px ;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.agregar_form:hover{
+    background-color: #0aa0b1;
+    cursor: pointer;
+}
+

@@ -20,20 +20,27 @@
     </header>
     <main>
         <section class="productos">
-            <div class="container_productos">
+            <div class="container_productos" id="lugarItem">
                 <div class="producto">
-                    <div class="producto_modelo">
-                        <p>Lentes</p>
+                    <div class="producto_imagen">
+                        <img src="https://tommymx.vteximg.com.br/arquivos/ids/346739-500-667/TH1867FS001-1.jpg?v=637734684173830000" alt="">
                     </div>
-                    <div class="producto_marca">
-                        <p>123456</p>
-                    </div>
-                    <div class="producto_precio">
-                        <p>1500</p>
-                    </div>
-                    <div class="producto_botones">
-                        <a href="#">Editar</a>
-                        <a href="#">Borrar</a>
+                    <div class="producto_info">
+                        <div class="producto_info_modelo">
+                            <p>Lentes de sol</p>
+                        </div>
+                        <div class="producto_info_marca">
+                            <h3>Marca: </h3>
+                            <p>Rayban</p>
+                        </div>
+                        <div class="producto_info_precio">
+                            <h3>Precio: </h3>
+                            <p>5500</p>
+                        </div>
+                        <div class="producto_info_accion">
+                            <a href="#" id="editar" >Editar</a>
+                            <a href="#" id="borrar">Eliminar</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,18 +54,22 @@
                     <div class="form_container_datos">
                         <div class="form_container_datos_nombre">
                              <h3>Modelo</h3>
-                             <input type="text" name="modelo" required placeholder="Modelo" id="modelo_form" class="modelo_form datos">
+                             <input type="text" required placeholder="Modelo" id="modelo_form" class="modelo_form datos">
                        </div>
                        <div class="form_container_datos_email">
                              <h3>Marca</h3>
-                             <input type="text" name="marca" required placeholder="marca" id ='marca_form' class="marca_form datos" >
+                             <input type="text" required placeholder="marca" id ='marca_form' class="marca_form datos" >
                        </div>
                        <div class="Form_container_datos_numero">
                              <h3>Precio</h3>
-                             <input type="number"  name="precio" required min="0" placeholder="Precio" id="precio_form" class="precio_form datos">
+                             <input type="number"  required min="0" placeholder="Precio" id="precio_form" class="precio_form datos">
+                       </div>
+                       <div class="Form_container_datos_urlImg">
+                             <h3>Url de imagen</h3>
+                             <input type="text"  placeholder="URL" id="urlImg_form" class="urlImg_form datos">
                        </div>
                        <div class="form_container_buttom">
-                             <button type="submit" name="agregar" id="agregar_form">Agregar</button>
+                             <a href="#" id="agregar_form" onclick="agergarProducto()" >Agregar</a>
                        </div>
                     </div>
                 </form>

@@ -5,6 +5,8 @@ body{
 
 header{
     background-color: #0b3954;
+    z-index: 2;
+    position: relative;
 }
 
 .header_container{
@@ -22,7 +24,33 @@ header{
     
 }
 
+.header_container_buttom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.lupa_header{
+    background-color: #0f496b;
+    height: 0px;
+    height: 50px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.lupa_header:hover{
+    background-color: #125880;
+    cursor: pointer;
+}
+
+.lupa_header svg {
+    fill: white;
+    width: 25px;
+    height: 25px;
+}
 
 .header_container_buttom button{
     background-color: #0f496b;
@@ -37,6 +65,69 @@ header{
     cursor: pointer;
 }
 
+/*SECCION DEL BUSCADOR*/
+.section_buscador{
+    background-color: #bfd7ea;
+}
+
+
+
+.container_buscador{
+    max-width: 83rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.lupa{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    fill: #7e7e7e;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px 0px 0 5px;
+    border: 1px solid #0b3954;
+    border-right: none;
+
+}
+
+.buscador{
+    border: 1px solid #0b3954;
+    border-left: none;
+    background-color: rgb(245, 245, 245);
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 0px 5px 5px 0px;
+    width:50%;
+    height: 30px;
+    outline: none;
+    margin-right: 15px;
+}
+
+#btn_buscar{
+    padding: 13px;
+    text-decoration: none;
+    color: white;
+    background-color: #087e8b;
+    margin-right: 15px;
+}
+
+#btn_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_list svg {
+    height: 30px;
+    width: 30px;
+    padding: 7px;
+    background-color: #087e8b;
+    fill: white;
+}
+
 /*SECCION DEL PRODUCTOS*/
 
 .container_productos{
@@ -45,7 +136,7 @@ header{
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .producto{
@@ -55,8 +146,7 @@ header{
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
     width: 400px;
-    padding: 15px;
-    margin: 15px 0 ;
+    margin: 15px 15px ;
 }
 
 .producto_imagen{
@@ -125,7 +215,6 @@ header{
 }
 
 .form_container{
-    margin: 0 auto;
     background-color: #ffffff;
     box-shadow: 0px 0px 5px 0px black;
     border-radius: 5px;
@@ -141,7 +230,7 @@ header{
     transition: all 0.3s ease;
 }
 
-.form_container_abajo{
+.form_container_mostrar{
     transform: scale(1);
 }
 
@@ -189,16 +278,86 @@ header{
     padding: 30px 20px;
 }
 
-.form_container_buttom a{
+.agregar_form{
     background-color: #087e8b;
     color: white;
     border: 0px ;
     padding: 10px 20px;
     text-decoration: none;
+    
 }
 
-#agregar_form:hover{
+.agregar_form_novisto{
+    display: none;
+}
+
+.agregar_form:hover{
     background-color: #0aa0b1;
     cursor: pointer;
 }
 
+.editar_form{
+    background-color: #088b1e;
+    color: white;
+    border: 0px ;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: none;
+}
+
+.editar_form_visto{
+    display: inline;
+}
+
+.editar_form:hover{
+    background-color: #0ba725;
+    cursor: pointer;
+}
+
+
+/*SECCION ALERT*/
+
+
+.alert{
+    display: flex;
+    justify-content: center;
+
+}
+
+.alert_container{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
+    position: fixed;
+    width: 50%;
+    margin: 0 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    top: 150px;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.alert_container_mostrar{
+    transform: scale(1);
+}
+.alert_container_info {
+    width: 90%;
+}
+
+.alert_container_boton{
+    padding: 16px 1px ;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+.alert_container_boton a{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px ;
+    border-radius: 5px;
+
+}

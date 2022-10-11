@@ -1,73 +1,53 @@
 body{
     margin: 0;
     font-family: sans-serif;
+    background-color: #DDDDDD;
+
 }
 
 header{
-    background-color: #0b3954;
-    z-index: 2;
-    position: relative;
+    background-color: #FF8C32;
 }
 
 .header_container{
     max-width: 83rem;
     margin: 0 auto;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .header_container_title h1{
     margin: 0;
     padding: 15px;
     color: white;
-    
 }
 
-.header_container_buttom{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.lupa_header{
-    background-color: #0f496b;
-    height: 0px;
-    height: 50px;
+.header_container_buttom {
     padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-}
-
-.lupa_header:hover{
-    background-color: #125880;
-    cursor: pointer;
-}
-
-.lupa_header svg {
-    fill: white;
-    width: 25px;
-    height: 25px;
 }
 
 .header_container_buttom button{
-    background-color: #0f496b;
     border: 0;
     color: white;
-    font-size: 45px;
-    padding: 15px;
+    font-size: 35px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF8C32;
+    box-shadow:  3px 3px 7px  #d9772b,
+                -3px -3px 5px  #fda84c;
 }
 
-.header_container_buttom button:hover{
-    background-color: #125880;
-    cursor: pointer;
-}
+.header_container_buttom button:active{
+    box-shadow:  inset 3px 3px 7px  #d9772b,
+                 inset   -3px -3px 5px  #fda84c;}
 
 /*SECCION DEL BUSCADOR*/
 .section_buscador{
-    background-color: #bfd7ea;
+    background-color: #FF8C32;
 }
 
 
@@ -78,54 +58,66 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
 }
 
 .lupa{
     width: 20px;
-    height: 20px;
+    height: 30px;
     padding: 10px;
-    fill: #7e7e7e;
-    background-color: rgb(245, 245, 245);
+    fill: white;
     border-radius: 5px 0px 0 5px;
-    border: 1px solid #0b3954;
-    border-right: none;
-
+    background-color: #FF8C32;
+    box-shadow: inset 3px 3px 7px  #d9772b,
+                inset -3px -3px 5px  #fda84c;
 }
 
 .buscador{
-    border: 1px solid #0b3954;
-    border-left: none;
-    background-color: rgb(245, 245, 245);
-    padding: 5px;
+    border: none;
+    padding: 5px 10px;
     font-size: 15px;
     border-radius: 0px 5px 5px 0px;
     width:50%;
-    height: 30px;
+    height: 40px;
     outline: none;
     margin-right: 15px;
-}
-
-#btn_buscar{
-    padding: 13px;
-    text-decoration: none;
+    -webkit-appearance: none;
     color: white;
-    background-color: #087e8b;
-    margin-right: 15px;
+    background-color: #FF8C32;
+    box-shadow: inset 3px 3px 7px  #d9772b,
+                inset -3px -3px 5px  #fda84c;
 }
 
-#btn_list{
+.buscador::placeholder{
+    color: white;
+}
+
+
+
+#btn_list  {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
+    padding: 9px;
+    color: white;
+    border-radius: 5px;
+    background-color: #FF8C32;
+    box-shadow:  3px 3px 7px  #d9772b,
+                -3px -3px 5px  #fda84c;
 }
-
 #btn_list svg {
     height: 30px;
     width: 30px;
-    padding: 7px;
-    background-color: #087e8b;
-    fill: white;
+}
+
+#btn_list:active {
+    background-color: #bfd7ea;
+    color: rgb(243, 243, 243);
+    background-color: #fcdcbb;
+    background-color: #FF8C32;
+    box-shadow: inset 3px 3px 7px  #d9772b,
+                inset -3px -3px 5px  #fda84c;
+
 }
 
 /*SECCION DEL PRODUCTOS*/
@@ -134,75 +126,100 @@ header{
     max-width: 83rem;
     margin: 0 auto;
     padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    min-height: 400px;
 }
 
 .producto{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    width: 400px;
-    margin: 15px 15px ;
+    width: 90%;
+    padding: 20px 0px;
+    margin: 10px auto;
+    background-color: #DDDDDD;
+    box-shadow:  3px 3px 7px  #bcbcbc,
+                -3px -3px 5px  #fefefe;  
 }
 
-.producto_imagen{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
 
-.producto_imagen img{
-    width: 100%;
-    height: auto;
-}
 
 .producto_info {
-    width: 60%;
+    width: 90%;
+    margin:  0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .producto_info_modelo, .producto_info_marca, .producto_info_precio{
     width: 200px;
     height: auto;
-    display: flex;
-    align-items: center;
+    margin-bottom: 5px;
 }
 
-.producto_info_marca h3, .producto_info_precio h3{
-    margin-right: 5px;
-}
 
-.producto_info_accion{
-    width: 200px;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
+
 
 #editar{
     text-decoration: none;
-    padding: 10px 20px;
-    background-color: green;
-    border-radius: 2px;
-    color: white;
+    margin-right: 15px;
+}
 
+#editar svg{
+    padding: 10px 20px;
+    color: rgb(0, 202, 0);
+    border-radius: 5px;
+    box-shadow:  3px 3px 7px  #bcbcbc,
+                -3px -3px 5px  #fefefe;  
+
+
+}
+
+#editar svg:active{
+    color: rgb(0, 179, 0);
+    box-shadow: inset  3px 3px 7px  #bcbcbc,
+                inset -3px -3px 5px  #fefefe;  
 }
 
 #borrar{
     text-decoration: none;
+}
+
+#borrar svg{
     padding: 10px 20px;
-    background-color: red;
-    border-radius: 2px;
-    color: white;
+    color: red;
+    border-radius: 5px;
+    box-shadow:  3px 3px 7px  #bcbcbc,
+                -3px -3px 5px  #fefefe;  
+}
+
+#borrar svg:active{
+    color: rgb(218, 0, 0);
+    background-color: #f3d9ff;
+    box-shadow: inset 3px 3px 7px  #bcbcbc,
+                inset -3px -3px 5px  #fefefe; 
+} 
+
+.no_hay_producto {
+    max-width: 83rem;
+    width: 90%;
+    height: 380px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+    background-color: #DDDDDD;
+    box-shadow: inset 3px 3px 7px  #bcbcbc,
+                inset -3px -3px 5px  #fefefe;  
 
 }
+.no_hay_producto svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
 
 
 /*SECCION DEL FORMULARIO*/
@@ -215,17 +232,18 @@ header{
 }
 
 .form_container{
-    background-color: #ffffff;
-    box-shadow: 0px 0px 5px 0px black;
     border-radius: 5px;
-    position: fixed;
+    position: absolute;
     margin: 0 10px;
     padding: 15px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     flex-direction: column;
-    top: 150px;
+    top: 200px;
+    background-color: #f1eaea;
+    box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
+                -3px -3px 5px  rgb(255, 255, 255);  
     transform: scale(0);
     transition: all 0.3s ease;
 }
@@ -237,10 +255,17 @@ header{
 .form_container_cerrar a{
     text-decoration: none;
     color: black;
-    padding: 5px;
+    padding: 7px 10px;
     font-size: 20px;
     font-weight: bolder;
+    border-radius: 5px;
+    box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
+                -3px -3px 5px  rgb(255, 255, 255);
 }
+
+.form_container_cerrar a:active{
+    box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
+                inset -3px -3px 5px  rgb(255, 255, 255);}
 
 
 .form_container_datos{
@@ -255,22 +280,27 @@ header{
     margin-bottom: 5px;
 }
 
-.form_container_datos_nombre, .form_container_datos_email,.Form_container_datos_numero,.Form_container_datos_urlImg{
+.form_container_datos_nombre, .form_container_datos_email,.Form_container_datos_numero{
     margin-bottom: 15px;
     width: 90%;
     margin: 0 auto;
+    
 }
 
 
 
 .datos{
-    border: 1px solid #0b3954;
+    border: none;
     padding: 5px;
     font-size: 15px;
     border-radius: 2px;
     width: 95%;
     height: 30px;
-}
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #f1eaea;
+    box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
+                inset -3px -3px 5px  rgb(255, 255, 255);}
 
 .form_container_buttom{
     width: 90%;
@@ -279,39 +309,41 @@ header{
 }
 
 .agregar_form{
-    background-color: #087e8b;
-    color: white;
+    font-weight: bold;
     border: 0px ;
     padding: 10px 20px;
     text-decoration: none;
-    
+    box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
+                -3px -3px 5px  rgb(255, 255, 255);    
 }
 
 .agregar_form_novisto{
     display: none;
 }
 
-.agregar_form:hover{
-    background-color: #0aa0b1;
-    cursor: pointer;
-}
+.agregar_form:active{
+    color: #086a75;
+    box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
+                inset -3px -3px 5px  rgb(255, 255, 255);}
 
 .editar_form{
-    background-color: #088b1e;
-    color: white;
+    color: #088b1e;
+    font-weight: bold;
     border: 0px ;
     padding: 10px 20px;
     text-decoration: none;
     display: none;
+    box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
+                -3px -3px 5px  rgb(255, 255, 255);
 }
 
 .editar_form_visto{
     display: inline;
 }
 
-.editar_form:hover{
-    background-color: #0ba725;
-    cursor: pointer;
+.editar_form:active{
+    box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
+                inset -3px -3px 5px  rgb(255, 255, 255);
 }
 
 
@@ -325,8 +357,6 @@ header{
 }
 
 .alert_container{
-    background-color: #ffffff;
-    box-shadow: 0px 0px 5px 0px black;
     border-radius: 5px;
     position: fixed;
     width: 50%;
@@ -336,28 +366,200 @@ header{
     justify-content: space-around;
     align-items: flex-end;
     flex-direction: column;
-    top: 150px;
+    top: 200px;
     transform: scale(0);
     transition: all 0.3s ease;
+    background-color: #f1eaea;
+    box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
+                -3px -3px 5px  rgb(255, 255, 255);
 }
 .alert_container_mostrar{
     transform: scale(1);
 }
 .alert_container_info {
     width: 90%;
+    margin: 0 auto;
 }
 
 .alert_container_boton{
     padding: 16px 1px ;
-    border: 2px solid blue;
     border-radius: 5px;
+    
 }
 
 .alert_container_boton a{
-    background-color: blue;
-    color: white;
+    color: blue;
+    font-weight: bold;
     text-decoration: none;
     padding: 15px 30px ;
     border-radius: 5px;
+    box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
+                -3px -3px 5px  rgb(255, 255, 255);}
+
+.alert_container_boton a:active{
+    box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
+                inset -3px -3px 5px  rgb(255, 255, 255);}
+
+
+/*SECCION DEL FOOTER*/
+
+footer{
+    background-color: #06113C;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container{
+    max-width: 83rem;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer_redessociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_redessociales a{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 50%;
+    color: #ffff;
+    background-color: #06113C;
+    box-shadow:   3px 3px 7px #020511,
+                    -3px -3px 5px #0c216e;
+    
+}
+
+.footer_redessociales a:active{
+    color: rgb(199, 199, 199);
+    background-color: #06113C;
+    box-shadow:  inset  3px 3px 7px #020511,
+                 inset   -3px -3px 5px #0c216e;
+}
+
+.footer_redessociales a svg{
+    width: 100%;
+    height: 30px;
+}
+
+.copyrigth{
+    text-align: center;
+    color: #ffff;
+}
+
+@media (max-width: 912px){
+
+
+    /* SECCION PRODUCTOS TABLET */
+
+
+    .container_productos{
+        min-height: 1050px;
+    }
+
+    .no_hay_producto {
+        height: 1050px;
+    }
+}
+
+@media (max-width: 900px){
+
+
+    /* SECCION PRODUCTOS TABLET */
+
+
+    .container_productos{
+        min-height: 850px;
+    }
+
+    .no_hay_producto {
+        height: 850px;
+    }
+}
+
+@media (max-width: 768px){
+
+
+    /* SECCION PRODUCTOS TABLET */
+
+
+    .container_productos{
+        min-height: 700px;
+    }
+
+    .no_hay_producto {
+        height: 700px;
+    }
+
+      /* SECCION FORM CELULAR */
+
+      .form_container{
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px){
+
+
+    /* SECCION PRODUCTOS  CELULAR */
+
+
+    .container_productos{
+        min-height: 570px;
+    }
+
+    .producto_info_accion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #editar {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #editar svg{
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        
+    }
+    
+    #borrar {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    #borrar svg{
+        width: 80%;
+    }
+
+    .no_hay_producto {
+        height: 570px;
+    }
+
+    
+    .no_hay_producto svg {
+        width: 40px;
+        height: 40px;
+        margin: 4px;
+    }
+
+
+    /* SECCION ALERT CELULAR */
+
+    .alert_container{
+       
+        width: 80%;
+
+    }
 
 }
